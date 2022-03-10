@@ -8,3 +8,9 @@
 ## First Section
 
 Write something cool.. 🦊
+
+| Method | URI   | Params |
+| : |   :-   |  :  |
+| Get | /API/products/getBy | 24  |
+| Get | /API/orders/   | 25  |
+| Get | /API/payment  | 26  |
