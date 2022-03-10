@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Routes::get("/login", function (){
+ return response()->json(["message"=>"you should
+  login or register first"],200);
+})->name("login");
