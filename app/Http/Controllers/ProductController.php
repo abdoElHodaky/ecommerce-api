@@ -60,6 +60,14 @@ class ProductController extends Controller
 
         return response()->json($product, 200);
     }
+    
+    public function productByPrice($price,$gt='>=')
+    {
+        $product  = Product::with('reviews')
+            ->where('price',$gt , $price)->firstOrFail();
+
+        return response()->json($product, 200);
+    }
 
     /**
      * Remove the specified product from storage.
