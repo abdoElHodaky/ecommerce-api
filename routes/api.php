@@ -49,6 +49,9 @@ Route::group([
     Route::post('/', [ProductController::class, 'store'])->middleware('api');
 
     Route::get('/{slug}', [ProductController::class, 'productBySlug']);
+    Route::get('/{price,gt}', [ProductController::class, 'productsByPrice']);
+   
+   
     Route::delete('/{id}', [ProductController::class, 'destroy'])->middleware('api');
     Route::put('/{id}', [ProductController::class, 'update'])->middleware('api');
 
