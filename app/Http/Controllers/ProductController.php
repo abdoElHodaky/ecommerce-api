@@ -90,7 +90,7 @@ class ProductController extends Controller
      *
      * @return json
      */
-    public function store()
+    public function store($request)
     {
         if (Auth::check() && Auth::user()->is_admin) {
             $productName = 'Sample name';
@@ -102,7 +102,7 @@ class ProductController extends Controller
                 $slug = $slug . '-' . $next;
                 $next++;
             }
-            $product = Product::create([
+          /*  $product = Product::create([
                 'slug' => $slug,
                 'user_id' => Auth::user()->id,
                 'category_id' => 1,
@@ -110,6 +110,21 @@ class ProductController extends Controller
                 'name' => 'Sample name',
                 'description' => 'Sample description',
                 'price' => 0,
+                'image' => '/images/sample.jpg',
+                'brand' => 'Apple',
+                'count_stock' => 0,
+                'rating' => 0,
+                'num_reviews' => 0,
+            ]);*/
+           $prodreq=json_decode($request->input("product"),true);
+           $product = Product::create([
+                'slug' => $slug,
+                'user_id' => Auth::user()->id,
+                'category_id' => $productreq["catId"],
+                'sub_category_id' =>$productreq["subcatId"] ,
+                'name' => '$productreq["Name"]',
+                'description' => '$productreq["description"]',
+                'price' => intval( $productreq["price"]),
                 'image' => '/images/sample.jpg',
                 'brand' => 'Apple',
                 'count_stock' => 0,
