@@ -9,3 +9,8 @@
 
 Write something cool.. 🦊
 
+| Method      | URI.                         | Params.       |
+| :---        |    :----:                    |          ---: |
+| GET.        | /API/products/               |               |
+| GET.        | /API/products/delete/        | ID.           |
+
