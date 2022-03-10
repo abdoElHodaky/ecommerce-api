@@ -10,8 +10,8 @@
 Write something cool.. 🦊
 
 
-| Method | URI   | Params|
+| # | Name   | Age |
 | : |   :-   |  :  |
-| Get | /API/products/getBy | 24  |
-| Get | /API/orders/   | 25  |
-| Get | /API/payment  | 26  |
+| 1 | Saleem | 24  |
+| 2 | John   | 25  |
+| 3 | Ayman  | 26  |
