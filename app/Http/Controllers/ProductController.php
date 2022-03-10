@@ -90,7 +90,7 @@ class ProductController extends Controller
      *
      * @return json
      */
-    public function store($request)
+    public function store()
     {
         if (Auth::check() && Auth::user()->is_admin) {
             $productName = 'Sample name';
@@ -102,7 +102,7 @@ class ProductController extends Controller
                 $slug = $slug . '-' . $next;
                 $next++;
             }
-          /*  $product = Product::create([
+              $product = Product::create([
                 'slug' => $slug,
                 'user_id' => Auth::user()->id,
                 'category_id' => 1,
@@ -115,8 +115,8 @@ class ProductController extends Controller
                 'count_stock' => 0,
                 'rating' => 0,
                 'num_reviews' => 0,
-            ]);*/
-           $prodreq=json_decode($request->input("product"),true);
+            ]);
+          /* $prodreq=json_decode($request->input("product"),true);
            $product = Product::create([
                 'slug' => $slug,
                 'user_id' => Auth::user()->id,
@@ -130,7 +130,7 @@ class ProductController extends Controller
                 'count_stock' => 0,
                 'rating' => 0,
                 'num_reviews' => 0,
-            ]);
+            ]);*/
             return response()->json($product, 201);
         }
         return response()->json(['message' => 'Unauthorize'], 401);
