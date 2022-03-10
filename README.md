@@ -61,8 +61,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-| # | Name   | Age |
-| : |   :-   |  :  |
-| 1 | Saleem | 24  |
-| 2 | John   | 25  |
-| 3 | Ayman  | 26  |
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
