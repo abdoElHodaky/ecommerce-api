@@ -63,10 +63,10 @@ class ProductController extends Controller
     
     public function productByPrice($price,$gt='>=')
     {
-        $product  = Product::with('reviews')
-            ->where('price',$gt , $price)->firstOrFail();
+        $products  = Product::with('reviews')
+            ->where('price',$gt , $price)->get();
 
-        return response()->json($product, 200);
+        return response()->json(["products"=>$products, 200);
     }
 
     /**
