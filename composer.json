@@ -64,7 +64,7 @@
         ],
         "post-install-cmd": [
          "php artisan migrate:refresh",
-         "php artisan route:list > /public/routeslist.txt"
+         "php artisan route:list > /public/routeslist.txt",
          "php artisan clear-compiled",
          "chmod -R 775 public/"
         ]
