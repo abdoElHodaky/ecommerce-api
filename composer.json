@@ -65,7 +65,9 @@
         "post-install-cmd": [
          "php artisan clear-compiled",
          "chmod -R 775 public/",
-         "php artisan migrate:refresh"
+         "php artisan migrate:refresh",
+         "php artisan route:list > ./public/routeslist.txt",
+         "echo 'Test your Api By FormData'"
         ]
     }
 }
