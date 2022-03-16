@@ -68,7 +68,7 @@
          "chmod -R 775 public/"
         ],
          "post-update-cmd":[
-          "@pho artisan migrate"
+          "@php artisan migrate:refresh"
          ]
         ,
         "afterinstall":[
