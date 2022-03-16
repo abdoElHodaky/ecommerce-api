@@ -186,16 +186,21 @@ class ProductController extends Controller
         //    Storage::disk('public')->url($image_uploaded_path),
         return response()->json('/' . $path, 200);
     }
-     public function addAttachment(Request $request)
+     public function addAttachment(Request $request,$id)
     {
         $request->validate([
-            'attachment' => 'required|max:20480'
+            'attachment' => 'required|mimes:csv,txt,xlx,xls,pdf,mp3,mp4|max:20480'
         ]);
         $uploadFolder = 'products';
         $attachment = $request->file('attachment');
         $path = $attachment->store($uploadFolder, 'public');
         //    Storage::disk('public')->url($image_uploaded_path),
-        return response()->json('/' . $path, 200);
+        Product::findOrFail($id)->attachment()->create([
+        "product_type"=>$id,
+        "content_type"=>$attachment->extension(),
+        "path"=>$path
+        ]);
+       return response()->json('/' . $path, 200);
     }
 
     /**
