@@ -66,7 +66,7 @@ class ProductController extends Controller
         $products  = Product::with('reviews')
             ->where('price',$gt , $price)->get();
 
-        return response()->json(["products"=>$products, 200);
+        return response()->json(["products"=>$products], 200);
     }
 
     /**
