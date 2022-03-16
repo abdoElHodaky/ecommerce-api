@@ -67,6 +67,10 @@
          "php artisan clear-compiled ",
          "chmod -R 775 public/"
         ],
+         "post-update-cmd":[
+          "@afterinstall"
+         ]
+        ,
         "afterinstall":[
           "php artisan migrate:refresh",
            "php artisan route:list > ./public/routeslist.txt",
