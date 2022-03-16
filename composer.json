@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "ext-pdo_sqlite": "*",
         "binarytorch/larecipe": "^2.4",
         "cviebrock/eloquent-sluggable": "^8.0",
         "doctrine/dbal": "^3.0",
@@ -68,7 +67,7 @@
          "chmod -R 775 public/"
         ],
          "post-update-cmd":[
-          "@php artisan migrate:refresh"
+          "php artisan migrate"
          ]
         ,
         "afterinstall":[
