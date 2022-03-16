@@ -58,6 +58,9 @@ Route::group([
     Route::post('/{id}/reviews', [ProductController::class, 'addProductReview'])->middleware('api');
 
     Route::post('/uploads', [ProductController::class, 'uploadImage'])->middleware('api');
+    
+    Route::put('/{id}/attachment', [ProductController::class, 'addAttachment'])->middleware('api');
+    
 });
 
 Route::group([
