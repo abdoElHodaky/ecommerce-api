@@ -23,4 +23,8 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\SubCategory');
     }
+     public function attachments()
+    {
+        return $this->hasMany('App\Models\Attachment', 'product_id');
+    }
 }
