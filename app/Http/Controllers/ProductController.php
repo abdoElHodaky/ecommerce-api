@@ -186,6 +186,17 @@ class ProductController extends Controller
         //    Storage::disk('public')->url($image_uploaded_path),
         return response()->json('/' . $path, 200);
     }
+     public function addAttachment(Request $request)
+    {
+        $request->validate([
+            'attachment' => 'required|max:20480'
+        ]);
+        $uploadFolder = 'products';
+        $attachment = $request->file('attachment');
+        $path = $attachment->store($uploadFolder, 'public');
+        //    Storage::disk('public')->url($image_uploaded_path),
+        return response()->json('/' . $path, 200);
+    }
 
     /**
      * Add product Review
