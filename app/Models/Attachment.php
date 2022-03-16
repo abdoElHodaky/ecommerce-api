@@ -10,7 +10,7 @@ class Attachment  extends Model
     
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
-    protected $table='products_attachments";
+    protected $table="products_attachments";
 
     public function product()
     {
