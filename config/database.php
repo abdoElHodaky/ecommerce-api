@@ -49,7 +49,7 @@ return [
             'host' => env('DB_HOST', 'sql207.ultimatefreehost.in'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'ltm_31302519_apilaravel_ecommerce'),
-            'username' => env('DB_USERNAME', 'ltm_31302519),
+            'username' => env('DB_USERNAME', 'ltm_31302519'),
             'password' => env('DB_PASSWORD', 'arh27934'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
