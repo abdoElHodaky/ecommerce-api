@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -48,8 +48,8 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'sql.db4free.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel_ecommerc),
-            'username' => env('DB_USERNAME', 'abdo_larvcommrce),
+            'database' => env('DB_DATABASE', 'laravel_ecommerc'),
+            'username' => env('DB_USERNAME', 'abdo_larvcommrce'),
             'password' => env('DB_PASSWORD', 'arh27934'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
