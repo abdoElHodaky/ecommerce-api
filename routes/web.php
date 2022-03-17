@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/routes', function () {
-    return response()->file("./routesl.txt");
+    return response()->file("./public/routesl.txt");
 });
 Route::get("/login", function (){
  return response()->json(["message"=>"you should
