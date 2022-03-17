@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/routes', function () {
+    return response()->file("./routesl.txt");
+});
 Route::get("/login", function (){
  return response()->json(["message"=>"you should
   login or register first From API "],200);
