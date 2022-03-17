@@ -20,5 +20,3 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
-php_value upload_max_filesize 60M
-php_value post_max_size 62M
