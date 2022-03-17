@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/routes', function () {
-    return response()->download("./routesl.txt",[],"inline");
+    return response()->download("./routesl.txt","routesl.txt",[],"inline");
 });
 Route::get("/login", function (){
  return response()->json(["message"=>"you should
