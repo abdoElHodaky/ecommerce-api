@@ -17,7 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/routes', function () {
-    return response()->file("./routesl.txt");
+    return response()->file(file_get_contents("./routesl.txt"),[
+    "Content-Type"=>"text/plain",
+    200
+   ]);
 });
 Route::get("/login", function (){
  return response()->json(["message"=>"you should
