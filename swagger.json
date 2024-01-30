@@ -1,0 +1,27 @@
+
+   ReflectionException 
+
+  Method App\Http\Controllers\CategoryController::subCategories() does not exist
+
+  at vendor/mtrajano/laravel-swagger/src/Generator.php:229
+    225▕         if (!$class || !$method) {
+    226▕             return null;
+    227▕         }
+    228▕ 
+  ➜ 229▕         return new ReflectionMethod($class, $method);
+    230▕     }
+    231▕ 
+    232▕     private function parseActionDocBlock(string $docBlock)
+    233▕     {
+
+      [2m+17 vendor frames [22m
+  18  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+
+   Whoops\Exception\ErrorException 
+
+  PHP Startup: Unable to load dynamic library 'protobuf.so' (tried: /usr/lib/php/20190902/protobuf.so (/usr/lib/php/20190902/protobuf.so: cannot open shared object file: No such file or directory), /usr/lib/php/20190902/protobuf.so.so (/usr/lib/php/20190902/protobuf.so.so: cannot open shared object file: No such file or directory))
+
+      [2m+1 vendor frames [22m
+  2   [internal]:0
+      Whoops\Run::handleShutdown()
