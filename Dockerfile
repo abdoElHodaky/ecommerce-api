@@ -1,4 +1,3 @@
-
 FROM richarvey/nginx-php-fpm:1.9.1
 RUN apk add -U --no-cache nghttp2-dev nodejs npm unzip tzdata postgresql postgresql-dev
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
@@ -27,4 +26,4 @@ RUN composer install
 #RUN php artisan migrate:install
 #RUN php artisan migrate --force
 #RUN php artisan db:seed --force
-EXPOSE 80 80
+EXPOSE 80/tcp
