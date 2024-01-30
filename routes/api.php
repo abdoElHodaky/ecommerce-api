@@ -81,7 +81,7 @@ Route::middleware('auth:api')->get('/config/paypal', function () {
 Route::group([
     'prefix' => 'categories'
 ], function () {
-    Route::get('/subCategories', [CategoryController::class, 'subCategories']);
+    Route::get('/subCategories', 'App\Http\Controllers\subCategoriesController@subCategories']);
     Route::get('/', [CategoryController::class, 'categories']);
     Route::get('/products', [CategoryController::class, 'products']);
 });
