@@ -17,7 +17,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "tymon/jwt-auth": "^1.0"
+        "tymon/jwt-auth": "^1.0",
+        "mtrajano/laravel-swagger": "^0.6.4"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
